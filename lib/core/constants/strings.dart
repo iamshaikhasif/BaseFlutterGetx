@@ -1,8 +1,8 @@
-abstract class StringValues{
+abstract class StringValues {
   static const appName = "Base Example";
   static const day = 'Day';
   static const days = 'Days';
-   static const hour = 'Hour';
+  static const hour = 'Hour';
   static const hours = 'Hours';
   static const left = 'Left';
   static const minute = 'Minute';
