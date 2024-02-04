@@ -1,4 +1,6 @@
-extension StringCasingExtension on String {
+import 'package:base_project_getx/core/helper/validator.dart';
+
+extension StringExtension on String {
   String toCapitalized() =>
       length > 0 ? '${this[0].toUpperCase()}${substring(1).toLowerCase()}' : '';
 
@@ -45,5 +47,31 @@ extension StringToLargeNumberExtension on String {
     }
 
     return str;
+  }
+
+  bool isValidEmail() {
+    return RegExp(Validators.emailPattern)
+        .hasMatch(this);
+  }
+
+  bool dobValidator() {
+    return RegExp(Validators.dobPattern)
+        .hasMatch(this);
+  }
+
+  bool nameValidator() {
+    return RegExp(Validators.namePattern).hasMatch(this);
+  }
+
+  bool mobileNumberValidator() {
+    return RegExp(Validators.mobilePattern).hasMatch(this);
+  }
+
+  bool numericValidation() {
+    return RegExp(Validators.numericPattern).hasMatch(this);
+  }
+
+  bool alphabetAndNumericValidation() {
+    return RegExp(Validators.alphaNumericPattern).hasMatch(this);
   }
 }

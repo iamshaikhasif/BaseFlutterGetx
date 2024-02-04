@@ -122,49 +122,49 @@ extension DateHelper on DateTime {
 
     if (days > 0) {
       if (days == 1) {
-        dayStr = '$days ${StringValues.day}';
+        dayStr = '$days ${StringResources.day}';
       } else {
-        dayStr = '$days ${StringValues.days}';
+        dayStr = '$days ${StringResources.days}';
       }
 
       if (hours > 0) {
         if (hours == 1) {
-          hourStr = '$hours ${StringValues.hour}';
+          hourStr = '$hours ${StringResources.hour}';
         } else {
-          hourStr = '$hours ${StringValues.hours}';
+          hourStr = '$hours ${StringResources.hours}';
         }
       }
 
       if (minutes > 0) {
         if (minutes == 1) {
-          minuteStr = '$minutes ${StringValues.minute}';
+          minuteStr = '$minutes ${StringResources.minute}';
         } else {
-          minuteStr = '$minutes ${StringValues.minutes}';
+          minuteStr = '$minutes ${StringResources.minutes}';
         }
       }
 
       return '$dayStr $hourStr $minuteStr';
     } else if (hours > 0) {
       if (hours == 1) {
-        hourStr = '$hours ${StringValues.hour}';
+        hourStr = '$hours ${StringResources.hour}';
       } else {
-        hourStr = '$hours ${StringValues.hours}';
+        hourStr = '$hours ${StringResources.hours}';
       }
 
       if (minutes > 0) {
         if (minutes == 1) {
-          minuteStr = '$minutes ${StringValues.minute}';
+          minuteStr = '$minutes ${StringResources.minute}';
         } else {
-          minuteStr = '$minutes ${StringValues.minutes}';
+          minuteStr = '$minutes ${StringResources.minutes}';
         }
       }
 
       return '$hourStr $minuteStr';
     } else {
       if (minutes == 1) {
-        minuteStr = '$minutes ${StringValues.minute}';
+        minuteStr = '$minutes ${StringResources.minute}';
       } else {
-        minuteStr = '$minutes ${StringValues.minutes}';
+        minuteStr = '$minutes ${StringResources.minutes}';
       }
 
       return '$minuteStr';
@@ -173,7 +173,7 @@ extension DateHelper on DateTime {
 
   String getPollDurationLeft({bool? showLeft = true}) {
     if (toLocal().isBefore(DateTime.now().toLocal())) {
-      return StringValues.pollEnded;
+      return StringResources.pollEnded;
     }
 
     final now = DateTime.now().toLocal();
@@ -188,57 +188,57 @@ extension DateHelper on DateTime {
 
     if (days > 0) {
       if (days == 1) {
-        dayStr = '$days ${StringValues.day}';
+        dayStr = '$days ${StringResources.day}';
       } else {
-        dayStr = '$days ${StringValues.days}';
+        dayStr = '$days ${StringResources.days}';
       }
 
       if (hours > 0) {
         if (hours == 1) {
-          hourStr = '$hours ${StringValues.hour}';
+          hourStr = '$hours ${StringResources.hour}';
         } else {
-          hourStr = '$hours ${StringValues.hours}';
+          hourStr = '$hours ${StringResources.hours}';
         }
       }
 
       if (minutes > 0) {
         if (minutes == 1) {
-          minuteStr = '$minutes ${StringValues.minute}';
+          minuteStr = '$minutes ${StringResources.minute}';
         } else {
-          minuteStr = '$minutes ${StringValues.minutes}';
+          minuteStr = '$minutes ${StringResources.minutes}';
         }
       }
 
       return showLeft == true
-          ? '$dayStr $hourStr $minuteStr ${StringValues.left}'
+          ? '$dayStr $hourStr $minuteStr ${StringResources.left}'
           : '$dayStr $hourStr $minuteStr';
     } else if (hours > 0) {
       if (hours == 1) {
-        hourStr = '$hours ${StringValues.hour}';
+        hourStr = '$hours ${StringResources.hour}';
       } else {
-        hourStr = '$hours ${StringValues.hours}';
+        hourStr = '$hours ${StringResources.hours}';
       }
 
       if (minutes > 0) {
         if (minutes == 1) {
-          minuteStr = '$minutes ${StringValues.minute}';
+          minuteStr = '$minutes ${StringResources.minute}';
         } else {
-          minuteStr = '$minutes ${StringValues.minutes}';
+          minuteStr = '$minutes ${StringResources.minutes}';
         }
       }
 
       return showLeft == true
-          ? '$hourStr $minuteStr ${StringValues.left}'
+          ? '$hourStr $minuteStr ${StringResources.left}'
           : '$hourStr $minuteStr';
     } else {
       if (minutes == 1) {
-        minuteStr = '$minutes ${StringValues.minute}';
+        minuteStr = '$minutes ${StringResources.minute}';
       } else {
-        minuteStr = '$minutes ${StringValues.minutes}';
+        minuteStr = '$minutes ${StringResources.minutes}';
       }
 
       return showLeft == true
-          ? '$minuteStr ${StringValues.left}'
+          ? '$minuteStr ${StringResources.left}'
           : '$minuteStr';
     }
   }

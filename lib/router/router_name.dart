@@ -1,6 +1,3 @@
-enum RoutersName {
-  splash,
-  login,
-  register,
-  home,
+abstract class RoutersName {
+  static const splash = "/splash";
 }

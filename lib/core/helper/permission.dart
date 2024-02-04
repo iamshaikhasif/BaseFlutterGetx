@@ -11,7 +11,7 @@ abstract class AppPermissions {
       return false;
     }
     if (status.isRestricted) {
-      AppUtility.showError("Storage Permission Error");
+      AppUtility.showError(message: "Storage Permission Error");
       return false;
     }
     if (status.isPermanentlyDenied) {
@@ -31,7 +31,7 @@ abstract class AppPermissions {
       return false;
     }
     if (status.isRestricted) {
-      AppUtility.showError('Camera Permission Error');
+      AppUtility.showError(message: 'Camera Permission Error');
       return false;
     }
     if (status.isPermanentlyDenied) {
@@ -50,7 +50,7 @@ abstract class AppPermissions {
       return false;
     }
     if (status.isRestricted) {
-      AppUtility.showError('Location Permission Error');
+      AppUtility.showError(message: 'Location Permission Error');
       return false;
     }
     if (status.isPermanentlyDenied) {
