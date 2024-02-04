@@ -1,6 +1,6 @@
 import 'package:base_project_getx/app/data/models/response/common_response.dart';
 
-class EncryptionResponseModel extends CommonResponse{
+class EncryptionResponseModel extends CommonResponse {
   EncryptionResponseModel({
     this.data,
   });
@@ -16,6 +16,8 @@ class EncryptionResponseModel extends CommonResponse{
 
   List<EncryptionResponseData>? data;
 
+
+  @override
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     if (data != null) {

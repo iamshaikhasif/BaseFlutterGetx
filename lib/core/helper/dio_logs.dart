@@ -39,7 +39,7 @@ class DioRequestLog extends TalkerLog {
         msg += '\nHeaders: $prettyHeaders';
       }
     } catch (_) {
-      // TODO: add handling can`t convert
+      
     }
     return msg;
   }
@@ -85,7 +85,7 @@ class DioResponseLog extends TalkerLog {
         msg += '\nHeaders: $prettyHeaders';
       }
     } catch (_) {
-      // TODO: add handling can`t convert
+      
     }
     return msg;
   }

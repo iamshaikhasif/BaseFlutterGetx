@@ -34,7 +34,7 @@ class DataRepository {
       final response = await apiClient.postApi(
           endPoint: ApiUrls.rsaEncryptKey, body: request);
       return right(EncryptionResponseModel.fromJson(response));
-    } catch (e, stackTrace) {
+    } catch (e) {
       AppUtility.log("response error ${e.toString()}");
       return left(
         Failure(e.toString()),
@@ -47,7 +47,7 @@ class DataRepository {
       final response = await apiClient.postApi(
           endPoint: ApiUrls.rsaDecryptKey, body: request);
       return right(EncryptionResponseModel.fromJson(response));
-    } catch (e, stackTrace) {
+    } catch (e) {
       AppUtility.log("response error ${e.toString()}");
       return left(
         Failure(e.toString()),

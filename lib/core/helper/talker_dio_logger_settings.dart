@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:talker/talker.dart';
+import 'package:talker_flutter/talker_flutter.dart';
 
 /// [TalkerDioLogger] settings and customization
 class TalkerDioLoggerSettings {

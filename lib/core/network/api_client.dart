@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:base_project_getx/app/data/models/request/refresh_token_request_model.dart';
 import 'package:base_project_getx/app/data/models/response/refresh_token_response_model.dart';
@@ -40,7 +39,7 @@ class ApiClient {
       return response.data;
     } on DioException catch (ex) {
       var statusCode = ex.response?.statusCode ?? 0;
-
+      AppUtility.log(statusCode.toString());
     }
   }
 

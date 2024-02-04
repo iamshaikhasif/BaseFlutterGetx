@@ -167,7 +167,7 @@ extension DateHelper on DateTime {
         minuteStr = '$minutes ${StringResources.minutes}';
       }
 
-      return '$minuteStr';
+      return minuteStr;
     }
   }
 
@@ -239,7 +239,7 @@ extension DateHelper on DateTime {
 
       return showLeft == true
           ? '$minuteStr ${StringResources.left}'
-          : '$minuteStr';
+          : minuteStr;
     }
   }
 }
